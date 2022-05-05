@@ -13,13 +13,21 @@
           font-family: 'Inconsolata', monospace;
       }
       .container {
-          padding: 10px 0;
+          padding: 60px 0 10px 0;
           text-align: center;
           background-color: #bccad6;
-
       }
-      h1 {
+      h1.page-title {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          margin: 15px 0;
           font-family: 'Shadows Into Light', cursive;
+          font-size: 48px;
+      }
+      h1.page-title + .card {
+          padding-top: 25px;
       }
       h2 {
           font-weight: 500;
@@ -48,28 +56,31 @@
           color: white;
           cursor: pointer;
       }
+      .card .btn i {
+          margin-left: 2px;
+      }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Please buy me these things</h1>
+    <h1 class="page-title">Please buy me these things</h1>
     <div class="card" style="background-color: #e3bbbb">
       <h2>A new nervous system</h2>
       <img src="./assets/frog_500.gif" alt="Nervous Frog">
       <p>Please do not offer the nerves responsible for toothache!</p>
       <a href="https://www.amazon.com/How-Stop-Worrying-Start-Living/dp/0671035975" target="_blank" class="btn">
         Get one here
-        <i class="fa fa-external-link" aria-hidden="true" style="margin-left: 3px;"></i>
+        <i class="fa fa-external-link" aria-hidden="true"></i>
       </a>
     </div>
 
     <div class="card" style="background-color: #f0e1bc">
       <h2>A day in a Haribo factory</h2>
       <img src="./assets/haribo_500.gif" alt="Haribo Gummies">
-      <p>but make sure they have a dentist on-site.</p>
+      <p>...but make sure they have a dentist on-site.</p>
       <a href="https://www.haribo.com/en-us/products" target="_blank" class="btn">
         Get one here
-        <i class="fa fa-external-link" aria-hidden="true" style="margin-left: 3px;"></i>
+        <i class="fa fa-external-link" aria-hidden="true"></i>
       </a>
     </div>
 
@@ -79,7 +90,7 @@
       <p>...to erase my memory and finally stop thinking about<br/> that weird thing I said in a class.</p>
       <a href="https://acclaimmag.com/culture/scientists-re-created-neuralizer-men-black/" target="_blank" class="btn">
         Get one here
-        <i class="fa fa-external-link" aria-hidden="true" style="margin-left: 3px;"></i>
+        <i class="fa fa-external-link" aria-hidden="true"></i>
       </a>
     </div>
 
@@ -89,7 +100,7 @@
       <p>(so I have more time to procrastinate)</p>
       <a href="https://www.netflix.com/" target="_blank" class="btn">
         Get one here
-        <i class="fa fa-external-link" aria-hidden="true" style="margin-left: 3px;"></i>
+        <i class="fa fa-external-link" aria-hidden="true"></i>
       </a>
     </div>
   </div>
