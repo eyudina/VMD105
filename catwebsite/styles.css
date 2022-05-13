@@ -77,12 +77,16 @@ a {
     flex-grow: 2;
 }
 
-.content  h1 {
+.content h1 {
     color: white;
 }
 
 .content {
     max-width: 500px;
+}
+
+.content img {
+    width: 100%;
 }
 
 .article {
