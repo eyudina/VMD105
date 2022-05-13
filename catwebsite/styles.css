@@ -23,6 +23,12 @@ h1 {
 
 a {
     text-decoration: none;
+    color: white;
+}
+
+a.link {
+    color: #43e3e9;
+    border-bottom: 1px dashed #43e3e9;
 }
 
 .main-page-content {
@@ -192,5 +198,3 @@ nav.crumbs ul li.active > * {
 .btn i {
     margin-left: 5px;
 }
-
-
