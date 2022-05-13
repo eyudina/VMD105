@@ -35,6 +35,7 @@ a.link {
     height: calc(100vh - 273px);
     background-image: url("images/home_meow.jpg");
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
 }
 
