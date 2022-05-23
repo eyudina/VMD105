@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset='UTF-8')
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Kate Yudina - Portfolio
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        link(rel='stylesheet' href='css/main.css')
+    body
+        header
+            nav.navbar-top
+                ul.wrapper
+                    li.navbar-top--left
+                        a(href='#' class='logo') Kate Yudina
+                    li.navbar-top--right
+                        a(href='https://github.com/eyudina/VMD105' target="_blank")
+                            i(class="fa fa-github")
+                            span GitHub
+            .banner
+        - var pages = ['home', 'pixels', 'vector', 'motion', 'print', 'contact'];
+        - var current_page = 'home'
+        block navigation
+            nav.navbar-page
+                ul.wrapper
+                    each page in pages ? pages : ['There are no menu items']
+                        li(class = page === current_page ? 'active' : '')
+                            a(href = page === 'home' ? 'index.html': './' + page + '.html')
+                                span #{page}
+        block content

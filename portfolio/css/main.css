@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f2f2f3;
+  font-family: "Baloo 2", cursive;
+  text-align: center;
+  color: #202124;
+}
+
+a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #202124;
+}
+
+i {
+  margin-right: 5px;
+  color: #202124;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+article {
+  padding: 0 100px 0 100px;
+}
+
+h1 {
+  margin: 18px 0;
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+p {
+  margin: 16px 0;
+  font-size: 15px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+nav.navbar-top {
+  background-color: white;
+  box-shadow: 0 2px 2px #e3e3e5;
+}
+nav.navbar-top ul {
+  display: flex;
+  flex-flow: row nowrap;
+}
+nav.navbar-top li {
+  display: flex;
+  flex-grow: 1;
+}
+nav.navbar-top li.navbar-top--left {
+  justify-content: flex-start;
+}
+nav.navbar-top li.navbar-top--right {
+  justify-content: flex-end;
+}
+nav.navbar-top li a {
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+nav.navbar-top li a span {
+  transition: color 0.5s ease-in-out;
+}
+nav.navbar-top li a:hover span {
+  color: #FFDC5D;
+}
+
+nav.navbar-page {
+  margin-bottom: 2px;
+  background-color: white;
+  box-shadow: 0 -2px 2px #e3e3e5;
+}
+nav.navbar-page ul {
+  display: flex;
+  justify-content: center;
+}
+nav.navbar-page li.active span {
+  background-image: linear-gradient(#D2D5FF, #D2D5FF);
+  background-repeat: no-repeat;
+  background-size: 100% 40%;
+  background-position: right 75%;
+}
+nav.navbar-page a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: "Indie Flower", cursive;
+  font-size: 22px;
+  text-transform: capitalize;
+}
+nav.navbar-page a span {
+  background-image: linear-gradient(#D2D5FF, #D2D5FF);
+  background-repeat: no-repeat;
+  background-size: 0 40%;
+  background-position: right 75%;
+  transition: background-size 0.5s;
+}
+nav.navbar-page a:hover span {
+  background-size: 100% 40%;
+  background-position: left 75%;
+  border-bottom: none;
+}
+
+.logo {
+  font-family: "Indie Flower", cursive;
+  font-size: 25px;
+  line-height: 1.6rem;
+}
+
+.banner {
+  margin: 10px auto;
+  max-width: 1200px;
+  height: 240px;
+  background: #e0e0e2 url("../assets/images/banner.png") no-repeat center center/1200px 240px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .banner {
+    background: #e0e0e2 url("../assets/images/banner@2x.png") no-repeat center center/1200px 240px;
+  }
+}
+
+.content {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 376px);
+  background-color: white;
+}
+.content > * {
+  display: flex;
+}
+.content img, .content video, .content iframe {
+  display: inline-block;
+  flex-grow: 1;
+  max-width: 500px;
+  margin: 10px;
+  border: 20px solid #D2D5FF;
+}
+.content article {
+  flex-grow: 2;
+  margin: 10px;
+  padding: 20px;
+  min-width: 400px;
+  text-align: left;
+}
+.content article p {
+  max-width: 500px;
+}
+.content article.align-center {
+  text-align: center;
+}
+
+.avatar {
+  max-width: 350px;
+  max-height: 350px;
+}
+
+.button {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 5px 20px;
+  background-color: #FFDC5D;
+  border: 2px solid #202124;
+  border-radius: 20px;
+  box-shadow: 0 2px 2px #e3e3e5;
+  transition: transform 0.5s;
+}
+.button:hover {
+  transform: scale(1.1);
+}

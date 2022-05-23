@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+$primary-color: white;
+$secondary-color: #f2f2f3;
+$text-color: #202124;
+
+$purple: #D2D5FF;
+$green: #97EDAA;
+$yellow: #FFDC5D;
+$pink: #FFC5CD;
+
+@mixin retina-display($color, $url, $repeat, $posX, $posY, $width, $height) {
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    background: $color url($url) $repeat $posX $posY / $width $height;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: $secondary-color;
+  font-family: 'Baloo 2', cursive;
+  text-align: center;
+  color: $text-color;
+}
+
+a {
+  font-size: 18px;
+  text-decoration: none;
+  color: $text-color;
+}
+
+i {
+  margin-right: 5px;
+  color: $text-color;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+article { padding: 0 100px 0 100px; }
+
+h1 {
+  margin: 18px 0;
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+p {
+  margin: 16px 0;
+  font-size: 15px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+nav.navbar-top {
+  background-color: $primary-color;
+  box-shadow: 0 2px 2px #e3e3e5;
+
+  ul {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  li {
+    display: flex;
+    flex-grow: 1;
+
+    &.navbar-top--left {
+      justify-content: flex-start;
+    }
+    &.navbar-top--right {
+      justify-content: flex-end;
+    }
+    a {
+      padding-top: 20px;
+      padding-bottom: 15px;
+      span {
+        transition: color .5s ease-in-out;
+      }
+      &:hover span {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+nav.navbar-page {
+  margin-bottom: 2px;
+  background-color: $primary-color;
+  box-shadow: 0 -2px 2px #e3e3e5;
+
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  li.active {
+    span {
+      background-image: linear-gradient($purple, $purple);
+      background-repeat: no-repeat;
+      background-size: 100% 40%;
+      background-position: right 75%;
+    }
+  }
+  a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 22px;
+    text-transform: capitalize;
+    span {
+      background-image: linear-gradient($purple, $purple);
+      background-repeat: no-repeat;
+      background-size: 0 40%;
+      background-position: right 75%;
+      transition: background-size .5s;
+    }
+    &:hover span {
+      background-size: 100% 40%;
+      background-position: left 75%;
+      border-bottom: none;
+    }
+  }
+}
+
+.logo {
+  font-family: 'Indie Flower', cursive;
+  font-size: 25px;
+  line-height: 1.6rem;
+}
+
+.banner {
+  margin: 10px auto;
+  max-width: 1200px;
+  height: 240px;
+  background: #e0e0e2 url('../assets/images/banner.png') no-repeat center center / 1200px 240px;
+  @include retina-display(#e0e0e2, '../assets/images/banner@2x.png', no-repeat, center, center, 1200px, 240px);
+}
+
+.content {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 376px);
+  background-color: $primary-color;
+  & > * {
+    display: flex;
+  }
+
+  img, video, iframe {
+    display: inline-block;
+    flex-grow: 1;
+    max-width: 500px;
+    margin: 10px;
+    border: 20px solid $purple;
+  }
+
+  article {
+    flex-grow: 2;
+    margin: 10px;
+    padding: 20px;
+    min-width: 400px;
+    text-align: left;
+    p {
+      max-width: 500px;
+    }
+    &.align-center {
+      text-align: center;
+    }
+  }
+}
+
+.avatar {
+  max-width: 350px;
+  max-height: 350px;
+}
+
+.button {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 5px 20px;
+  background-color: $yellow;
+  border: 2px solid $text-color;
+  border-radius: 20px;
+  box-shadow: 0 2px 2px #e3e3e5;
+  transition: transform .5s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
