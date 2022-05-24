@@ -3,10 +3,9 @@ extends _layout.pug
 prepend navigation
     -var current_page = 'vector'
 
+block media
+    img(src='assets/images/vector.jpg')
+
 block content
-    section.content
-        .wrapper
-            img(src='assets/images/vector.jpg')
-            article
-                h1 Illustrator Project
-                p I made a logo for an existing CCSF student club that I am a member of. This logo can be used for any type of print media (flyers, social media, certificates, etc.) and also for digital media (videos, presentations, collages, etc.)
+    h1 Illustrator Project
+    p I made a logo for an existing CCSF student club that I am a member of. This logo can be used for any type of print media (flyers, social media, certificates, etc.) and also for digital media (videos, presentations, collages, etc.)

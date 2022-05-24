@@ -8,7 +8,6 @@ body {
   margin: 0;
   background-color: #f2f2f3;
   font-family: "Baloo 2", cursive;
-  text-align: center;
   color: #202124;
 }
 
@@ -23,19 +22,21 @@ i {
   color: #202124;
 }
 
+nav, section {
+  display: flex;
+  justify-content: center;
+}
+
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-article {
-  padding: 0 100px 0 100px;
-}
-
 h1 {
   margin: 18px 0;
   font-size: 36px;
+  line-height: 1.1;
 }
 
 h2 {
@@ -47,9 +48,12 @@ p {
   font-size: 15px;
 }
 
+.align-center {
+  text-align: center;
+}
+
 .wrapper {
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 0 20px;
   max-width: 1200px;
 }
 
@@ -59,7 +63,7 @@ nav.navbar-top {
 }
 nav.navbar-top ul {
   display: flex;
-  flex-flow: row nowrap;
+  flex-basis: 100%;
 }
 nav.navbar-top li {
   display: flex;
@@ -83,16 +87,20 @@ nav.navbar-top li a:hover span {
 }
 
 nav.navbar-page {
-  margin-bottom: 2px;
-  background-color: white;
-  box-shadow: 0 -2px 2px #e3e3e5;
+  position: relative;
+  top: 25px;
+  margin-top: -20px;
 }
 nav.navbar-page ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  border: 3px solid #455665;
+  border-radius: 10px;
+  background-color: white;
 }
 nav.navbar-page li.active span {
-  background-image: linear-gradient(#D2D5FF, #D2D5FF);
+  background-image: linear-gradient(#FFDC5D, #FFDC5D);
   background-repeat: no-repeat;
   background-size: 100% 40%;
   background-position: right 75%;
@@ -135,41 +143,48 @@ nav.navbar-page a:hover span {
   }
 }
 
-.content {
+section {
   padding-top: 20px;
+  width: 100%;
+  background-color: white;
+  min-height: calc(100vh - 376px);
+  border-top: 40px solid #D2D5FF;
+}
+
+article {
   display: flex;
   justify-content: center;
-  width: 100%;
-  min-height: calc(100vh - 376px);
-  background-color: white;
+  padding: 20px;
+  max-width: 1000px;
 }
-.content > * {
-  display: flex;
+@media only screen and (max-width: 640px) {
+  article {
+    flex-flow: column;
+    align-items: center;
+  }
 }
-.content img, .content video, .content iframe {
-  display: inline-block;
+article .media {
   flex-grow: 1;
-  max-width: 500px;
+}
+article .media img, article .media video, article .media iframe {
+  display: inline-block;
   margin: 10px;
+  max-width: 400px;
   border: 20px solid #D2D5FF;
 }
-.content article {
+@media only screen and (max-width: 740px) {
+  article .media img, article .media video, article .media iframe {
+    max-width: 300px;
+  }
+}
+article .content {
   flex-grow: 2;
-  margin: 10px;
-  padding: 20px;
-  min-width: 400px;
-  text-align: left;
-}
-.content article p {
-  max-width: 500px;
-}
-.content article.align-center {
-  text-align: center;
+  padding: 5px 20px;
 }
 
 .avatar {
-  max-width: 350px;
-  max-height: 350px;
+  max-width: 280px;
+  max-height: 280px;
 }
 
 .button {

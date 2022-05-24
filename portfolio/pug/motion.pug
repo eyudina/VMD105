@@ -3,13 +3,11 @@ extends _layout.pug
 prepend navigation
     -var current_page = 'motion'
 
+block media
+    video(width="500" height="280" controls)
+        source(src="./assets/videos/motion.mp4" type="video/mp4")
+        Your browser does not support the video tag.
+
 block content
-    section.content
-        .wrapper
-            video(width="500" height="350" controls)
-                source(src="./assets/videos/motion.mp4" type="video/mp4")
-                Your browser does not support the video tag.
-            </video>
-            article
-                h1 Animate Project
-                p I applied animation to a student club logo for a future use of it in digital media such as video.
+    h1 Animate Project
+    p I applied animation to a student club logo for a future use of it in digital media such as video.

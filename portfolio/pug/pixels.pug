@@ -3,10 +3,9 @@ extends _layout.pug
 prepend navigation
     -var current_page = 'pixels'
 
+block media
+    img(src='assets/images/pixels.jpg' alt="Photoshop Project")
+
 block content
-            section.content
-                .wrapper
-                    img(src='assets/images/pixels.jpg')
-                    article
-                        h1 Photoshop Project
-                        p For this project, I used my Halloween photos to create a collage of fun army of sunflowers. I was working with layer masking to hide background details for each photo. I also added a type and a frame.
+    h1 Photoshop Project
+    p For this project, I used my Halloween photos to create a collage of fun army of sunflowers. I was working with layer masking to hide background details for each photo. I also added a type and a frame.

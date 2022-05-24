@@ -3,11 +3,10 @@ extends _layout.pug
 prepend navigation
     -var current_page = 'home'
 
+block media
+    img(src='assets/images/avatar.jpg' class="avatar")
+
 block content
-            section.content
-                .wrapper
-                    img(src='assets/images/avatar.jpg' class="avatar")
-                    article
-                        h1 About Me
-                        p Hello! My name is Kate, and I am passionate about design! I would like to pursue a career as a UI/UX designer, so I am currently taking related classes at the City College of San Francisco.
-                        p Here is my portfolio of projects I was working on during my first semester of the Visual Design Foundation certificate program. Hope you like it!
+    h1 About Me
+    p Hello! My name is Kate, and I am passionate about design! I would like to pursue a career as a UI/UX designer, so I am currently taking related classes at the City College of San Francisco.
+    p Here is my portfolio of projects I was working on during my first semester of the Visual Design Foundation certificate program. Hope you like it!

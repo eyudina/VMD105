@@ -3,7 +3,7 @@ html(lang="en")
     head
         meta(charset='UTF-8')
         meta(name="viewport" content="width=device-width, initial-scale=1")
-        title Kate Yudina - Portfolio
+        title Kate Yudina - VMD 105 Portfolio
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
         link(rel='stylesheet' href='css/main.css')
     body
@@ -17,8 +17,10 @@ html(lang="en")
                             i(class="fa fa-github")
                             span GitHub
             .banner
+
         - var pages = ['home', 'pixels', 'vector', 'motion', 'print', 'contact'];
         - var current_page = 'home'
+
         block navigation
             nav.navbar-page
                 ul.wrapper
@@ -26,4 +28,10 @@ html(lang="en")
                         li(class = page === current_page ? 'active' : '')
                             a(href = page === 'home' ? 'index.html': './' + page + '.html')
                                 span #{page}
-        block content
+        section
+            .wrapper
+                article
+                    .media
+                        block media
+                    .content
+                        block content
